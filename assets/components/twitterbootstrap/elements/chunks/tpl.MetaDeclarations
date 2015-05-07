@@ -1,0 +1,29 @@
+<meta charset="[[++charset]]">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="[[++site_url]]">
+<title>[[*pagetitle]]</title>
+<meta name="author" content="[[*createdby:userinfo=`fullname`:empty=`[[*createdby:userinfo=`username`]]`]]">
+<meta name="description" content="[[*description]]">
+<meta name="generator" content="MODX Revolution [[++settings_version]] ([[++settings_distro]])">
+<meta name="keywords" content="[[TaggerGetTags:strtolower:toPlaceholder=`pageTags`?rowTpl=`@INLINE [[+tag]]`&resources=`[[*id]]`&separator=`,`]][[+pageTags]]">
+<meta name="twitter:card" content="summary">
+[[+twitter_creator:notempty=`<meta name="twitter:creator" content="[[+twitter_creator]]">`]]
+<meta name="twitter:description" content="[[*description:limit=`200`]]">
+<meta name="twitter:image" content="[[++assets_url]]images/[[+twitter_site_logo:empty=`[[+site_logo]]`]]">
+[[+twitter_site:notempty=`<meta name="twitter:site" content="[[+twitter_site]]">`]]
+<meta name="twitter:title" content="[[*pagetitle:limit=`70`]]">
+<meta name="twitter:url"  content="[[~[[*id]]?scheme=`full`]]">
+[[+fb_app_id:notempty=`<meta property="fb:app_id" content="[[+fb_app_id]]">`]]
+[[+fb_admins:notempty=`<meta property="fb:admins" content="[[+fb_admins]]">`]]
+<meta property="og:description" content="[[*description]]">
+<meta property="og:image" content="[[++assets_url]]images/[[+site_logo]]">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="[[++site_name]]">
+<meta property="og:title" content="[[*pagetitle]]">
+<meta property="og:type" content="website">
+<meta property="og:updated_time" content="[[*editedon:empty=`[[*publishedon]]`:strtotime:date=`%FT%X-0500`]]">
+<meta property="og:url" content="[[~[[*id]]?scheme=`full`]]">
+[[+googleid:notempty=`<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','[[+googleid]]','auto');ga('send','pageview');</script>`]]
+<link rel="canonical" href="[[~[[*id]]?scheme=`full`]]">

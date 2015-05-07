@@ -1,0 +1,4 @@
+<!--[if lt IE 9]>
+<script src="[[+cdn:default=`local`:strtolower:replace=`bootstrap==maxcdn`:select=`cloudflare=//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js&maxcdn=//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js&local=[[++assets_url]]components/twitterbootstrap/[[+bootstrapVersion:default=`3.3.4`]]/js/html5shiv.min.js`]]"></script>
+<script src="[[+cdn:default=`local`:strtolower:replace=`bootstrap==maxcdn`:select=`cloudflare=//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js&maxcdn=//oss.maxcdn.com/respond/1.4.2/respond.min.js&local=[[++assets_url]]components/twitterbootstrap/[[+bootstrapVersion:default=`3.3.4`]]/js/respond.min.js`]]"></script>
+<![endif]-->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="[[++cultureKey:default=`en`]]">
+<!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# product: http://graph.facebook.com/schema/og/product#">
+[[$SEO-META?
+	&fb_app_id=`217198328466783`
+	&fb_admins=`10205993442506334`
+	&googleid=`UA-11306908-1`
+	&twitter_creator=`@shawnwilkerson`
+	&twitter_site_logo=`shawn-wilkerson.jpg`
+	&twitter_site=`@shawnwilkerson`
+	&site_logo=`shawn-wilkerson.jpg`]]
+[[$CDN-Header:strip?
+	&cdn=`cloudflare`
+	&bootstrapVersion=`3.3.4`
+	&fontawesomeVersion=`4.3.0`
+	&useDefaultTheme=`1`]]
+[[$FontAwesome4:strip?cdn=`cloudflare`&fontAwesomeVersion=`4.3.0`]]
+[[$siteHeader]]
+[[$CDN-Shiv:strip?cdn=`cloudflare`]]
+</head>
+<body>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="[[++site_url]]">Home</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				[[Wayfinder:strip?
+					&startId=`[[+site_start]]`
+					&level=`1`
+					&sortBy=`menuindex`
+					&rowTpl=`tpl.BS3.Wayfinder.Navbar`
+					&outerTpl=`tpl.BS3.Wayfinder.outer`
+					&titleOfLinks=`menutitle
+					&cacheResults=`1`
+					&outerClass=`nav-primary`
+					&hereClass=`active`]]</div>
+		</div>
+	</nav>
+	<div class="container">
+		[[*id:gt=`1`:then=`
+		<ol class="breadcrumb hidden-print">
+			[[QuickCrumbs?
+				&tpl=`tpl.BS3.QuickCrumbs.Crumb`
+				&selfTpl=`tpl.BS3.QuickCrumbs.Here`
+				&siteStartTpl=`tpl.BS3.QuickCrumbs.Home`
+				&separator=``
+				&hideEmptyContainers=`1`
+				&showSiteStart=`1`]]
+		</ol>
+		`:else=``]]
+		[[*content]]
+	</div>
+	[[$CDN-Footer:strip?
+		&cdn=`cloudflare`
+		&bootstrapVersion=`3.3.4`
+		&jqueryversion=`1.11.2`]]
+	[[$sitefooter]]
+</body>
+</html>

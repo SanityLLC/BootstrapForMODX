@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="[[++cultureKey:default=`en`]]">
+<!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# product: http://graph.facebook.com/schema/og/product#">
+[[$SEO-META]]
+[[$CDN-Header]]
+[[$FontAwesome4]]
+[[$siteHeader]]
+[[$CDN-Shiv]]
+</head>
+<body>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse">
+				[[pdoMenu:strip?
+					&displayStart=`1`
+					&parents=`0`
+					&level=`1`
+					&sortBy=`menuindex`
+					&sortdir=`ASC`
+					&scheme=`full`
+					&hideSubMenus=`1`
+					&tpl=`@INLINE <li [[+classes]]> <a href="[[+link]]" title="[[+pagetitle]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+					&tplOuter=`@INLINE <ul class="nav navbar-nav">[[+wrapper]]</ul>`
+					&titleOfLinks=`menutitle
+					&cacheResults=`1`
+					&outerClass=`nav-primary`
+					&hereClass=`active`]]
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		[[pdoCrumbs?
+			&from=``
+			&to=``
+			&direction=``
+			&outputSeparator=``
+			&limit=``
+			&tplWrapper=`@INLINE<ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">[[+crumbs]]</ol>`
+			&tplHome=`[[-- Use the tpl as it is the same - format is required for schema.org]]`
+			&tpl=`@INLINE<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="[[+link]]" itemprop="item"> <span itemprop="name">[[+menutitle]]</span></a><meta itemprop="position" content="[[+idx]]" /></li>`
+			&tplCurrent=`@INLINE<li class="last active disabled" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="[[+link]]" itemprop="item"> <span itemprop="name">[[+menutitle]]</span></a><meta itemprop="position" content="[[+idx]]" /></li>`
+			&tplMax=``
+			&hideSingle=`1`
+			&showAtHome=`0`
+			&showHome=`1`
+			&showCurrent=`1`]]
+		[[*content]]
+	</div>
+	[[$CDN-Footer]]
+	[[$sitefooter]]
+</body>
+</html>

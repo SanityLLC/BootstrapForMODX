@@ -1,0 +1,1 @@
+<li [[+wf.classes]]> <a href="[[+wf.link]]" title="[[++site_name]] [[+wf.title]]" class="[[+wf.alias]]" [[+wf.attributes]]>[[+wf.linktext]]</a>[[+wf.wrapper]]</li>

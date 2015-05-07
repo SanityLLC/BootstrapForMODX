@@ -1,0 +1,3 @@
+[[+cdn:default=`local`:strtolower:replace=`bootstrap==maxcdn`:select=`cloudflare=//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/&maxcdn=//maxcdn.bootstrapcdn.com/bootstrap/&local=[[++assets_url]]components/twitterbootstrap/`:toPlaceholder=`TWITTERBOOTSTRAPURL`]]
+<link rel="stylesheet" href="[[+TWITTERBOOTSTRAPURL]][[+bootstrapVersion:default=`3.3.4`]]/css/bootstrap.min.css">
+[[+useDefaultTheme:eq=`1`:then=`<link rel="stylesheet" href="[[+TWITTERBOOTSTRAPURL]][[+bootstrapVersion:default=`3.3.4`]]/css/bootstrap-theme.min.css">`]]

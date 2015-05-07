@@ -1,0 +1,25 @@
+File Based Chunks
+
+The Chunks in the TwitterBootstrapForMODX Package are subject to be overwritten with updates as the vendor releases new versions. To reduce the number of chunks in the Element Tree of the Manager, I have decided to not provide chunks in the Manager, but to allow you to create your own linking them to the filesystem chunks.
+
+Benefits:
+Reduces the number of Elements in the tree.
+Allows transparent upgrades to the site without having to edit all the chunks, or worry about them being overwritten.
+
+The following steps are the ones I use filesystem-based Chunks.
+
+ 1) Log into the Manager.
+ 2) Switch to the Element tree.
+ 3) *Optional:* create a Category by clicking the [+] Sign to the right of Category to group all the chunks or use the Category the Package Provides.
+ 4) Click the [+] Sign to the right of Chunk.
+ 5) Enter a meaningful name, such as CDN-Header.
+ 6) *Optional* Select a Category
+ 7) Check the box which says Is Static.
+ 8) If you have the permissions, additional boxes should appear.
+ 9) If Filesystem is shown in the Media source box you can use the Static File Locator, by clicking on the icon to the right of the entry field.
+10) If another Media source is selected, it may or may not provide the access to complete these steps. If not, you will need to talk with the site administrators.
+11) You will need to open the assets/components/twitterbootstrap folder by clicking on the areas to traverse the assets directory tree.
+12) Select the tpl.BS3.CDN-Header or file associated with the chunk you are creating.
+13) Save the element once it is linked. The contents of the file should now be shown in the Chunk code box at the page bottom.
+
+You may have to occasionally clear the site cache after upadtes, though this is rare.

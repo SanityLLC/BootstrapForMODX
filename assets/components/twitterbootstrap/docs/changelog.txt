@@ -1,0 +1,5 @@
+Changelog file for TwitterBootstrapForMODX component.
+
+TwitterBootstrapForMODX 3.3.4
+====================================
+- Initial Release (versions match the vendor releases to avoid confusion).

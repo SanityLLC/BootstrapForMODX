@@ -1,0 +1,1 @@
+<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child"><a href="[[~[[+id]]]]" itemprop="url"><span itemprop="title">[[+menutitle:default=`[[+pagetitle]]`]]</span></a></li>
