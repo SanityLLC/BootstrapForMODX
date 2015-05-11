@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>P:\Dissertation\TwitterBootstrapForMODX\.README.md.html</title>
+<title>P:\Dissertation\BootstrapForMODX\.README.md.html</title>
 
 
 <style type="text/css">
@@ -639,13 +639,13 @@ function setDocumentScrollTop(ypos)
 
 </head>
 <body class="markdown-body">
-<h1> <a id="user-content-sanity-twitter-bootstrap-for-modx-revolution" class="anchor" href="#sanity-twitter-bootstrap-for-modx-revolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sanity Twitter Bootstrap for MODX Revolution</h1> 
-<p>This is the main Git repository for using the Sanity LLC Twitter Bootstrap with MODX Revolution.</p> 
+<h1> <a id="user-content-sanity-bootstrap-for-modx-revolution" class="anchor" href="#sanity-bootstrap-for-modx-revolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sanity Bootstrap for MODX (Revolution)</h1> 
+<p>This is the main Git repository for using the Sanity LLC Bootstrap with MODX Revolution.</p> 
 <p>@SanityLLC/developers</p> 
 <h2> <a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2> 
-<p>We tried to take the simplest route to provide maximum extensibility and ease of use. The publisher can select MaxCDN/Bootstrap, CloudFlare, or local storage (default). Additionally, a seperate header and footer file has been included which can be used to implement site specific content. The default template will attempt to load the Twitter Bootstrap 3 and FontAwesome files from the official CDNs, unless otherwise specified at runtime. Versions can also be designated in the Template at the <code>CDN-Header</code> and <code>CDN-Footer</code> chunk calls. A local fallback route has been implemented to ensure the necessary CSS and JavaScript is loaded if a CDN fails for whatever reason. If a version is not specified the defaults will be used.</p> 
-<h3> <a id="user-content-facebook-opengraph-twitter-card-and-google-analytics" class="anchor" href="#facebook-opengraph-twitter-card-and-google-analytics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Facebook, OpenGraph, Twitter Card and Google Analytics</h3> 
-<p>OpenGraph and Twitter card entries are automatically created for each page using the Resource <code>pagetitle</code>, <code>createdby</code>, <code>publishedon</code>, <code>description</code> and other attributes. To function as intended the <code>SEO-MetaDeclarations</code> call requires Google Analytics ID, fb:app_id and/or fb:admins, twitter:creator, and twitter:site entires to be populated.</p> 
+<p>We tried to take the simplest route to provide maximum extensibility and ease of use. The publisher can select MaxCDN/Bootstrap, CloudFlare, or local storage (default). Additionally, a seperate header and footer file has been included which can be used to implement site specific content. The default template will attempt to load the Bootstrap 3 and FontAwesome files from the official CDNs, unless otherwise specified at runtime. Versions can also be designated in the Template at the <code>CDN-Header</code> and <code>CDN-Footer</code> chunk calls. A local fallback route has been implemented to ensure the necessary CSS and JavaScript is loaded if a CDN fails for whatever reason. If a version is not specified the defaults will be used.</p> 
+<h3> <a id="user-content-facebook-opengraph--card-and-google-analytics" class="anchor" href="#facebook-opengraph--card-and-google-analytics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Facebook, OpenGraph, Card and Google Analytics</h3> 
+<p>OpenGraph and card entries are automatically created for each page using the Resource <code>pagetitle</code>, <code>createdby</code>, <code>publishedon</code>, <code>description</code> and other attributes. To function as intended the <code>SEO-MetaDeclarations</code> call requires Google Analytics ID, fb:app_id and/or fb:admins, :creator, and :site entires to be populated.</p> 
 <h2> <a id="user-content-page-map" class="anchor" href="#page-map" aria-hidden="true"><span class="octicon octicon-link"></span></a>Page Map</h2> 
 <ul> 
  <li>Template 
@@ -676,21 +676,21 @@ function setDocumentScrollTop(ypos)
 <p>@property string <strong>cdn</strong> The repository to use: bootstrap, maxcdn, cloudflare, local</p> 
 <p>@property string <strong>bootstrapVersion</strong> The version of bootstrap to load and should match CDN-Header. Defaults to 3.3.4.</p> 
 <h3> <a id="user-content-cdn-header" class="anchor" href="#cdn-header" aria-hidden="true"><span class="octicon octicon-link"></span></a>CDN-Header</h3> 
-<p>Loads Bootstrap and optionally its default template. Use the siteHeader chunk for dedicated templates which require Twitter Bootstrap to be loaded first.</p> 
+<p>Loads Bootstrap and optionally its default template. Use the siteHeader chunk for dedicated templates which require Bootstrap to be loaded first.</p> 
 <p>@property string <strong>cdn</strong> The repository to use: bootstrap, maxcdn, cloudflare, local</p> 
 <p>@property string <strong>bootstrapVersion</strong> The version of bootstrap to load. Defaults to 3.3.4.</p> 
 <h3> <a id="user-content-cdn-shiv" class="anchor" href="#cdn-shiv" aria-hidden="true"><span class="octicon octicon-link"></span></a>CDN-Shiv</h3> 
 <p>Loads html5shiv.min.js and respond.min.js.</p> 
 <p>@property string <strong>cdn</strong> The repository to use: bootstrap, maxcdn, cloudflare, local.</p> 
 <h3> <a id="user-content-seo-metadeclarations" class="anchor" href="#seo-metadeclarations" aria-hidden="true"><span class="octicon octicon-link"></span></a>SEO-MetaDeclarations</h3> 
-<p>Traditional, Facebook, OpenGraph, Twitter Card meta entries. Note: Twitter requires the page title to be limited to 70 characters and the description to 200 characters. These will be adjusted automatically.</p> 
+<p>Traditional, Facebook, OpenGraph, Card meta entries. Note: requires the page title to be limited to 70 characters and the description to 200 characters. These will be adjusted automatically.</p> 
 <p>@property string <strong>fb_app_id</strong> Instructions: <a href="https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html">https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html</a></p> 
 <p>@property string <strong>fb_admins</strong> Go to <a href="http://graph.facebook.com/YOUR-FACEBOOK-USERNAME">http://graph.facebook.com/YOUR-FACEBOOK-USERNAME</a> The first line should be your id. Instructions: <a href="https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html">https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html</a></p> 
 <p>@property string <strong>googleid</strong> The Google Id can be created by adding the site to your Google Analytics account <a href="http://www.google.com/analytics">http://www.google.com/analytics</a> Format: UA-11306908-1</p> 
 <p>@property string <strong>site_logo</strong> The file name of the image to be shown in Facebook Posts, Goolge Plus, LinkedIn, etc. The path will always be the site's assets_url/images. Image size should be 200x200 at a minimum.</p> 
-<p>@property string <strong>twitter_creator</strong> @username of content creator Reference: <a href="https://dev.twitter.com/cards/markup">https://dev.twitter.com/cards/markup</a> Example: @shawnwilkerson</p> 
-<p>@property string <strong>twitter_site</strong> The Twitter @username the card should be attributed to. For a company site use a company Twitter account (i.g. @SanityLLC), otherwise use the user's Twitter account.</p> 
-<p>@property string <strong>twitter_site_logo</strong> The file name of the image to be shown in Tweets. The path will always be the site's assets_url/images</p> 
+<p>@property string <strong>_creator</strong> @username of content creator Reference: <a href="https://dev..com/cards/markup">https://dev..com/cards/markup</a> Example: @shawnwilkerson</p> 
+<p>@property string <strong>_site</strong> The @username the card should be attributed to. For a company site use a company account (i.g. @SanityLLC), otherwise use the user's account.</p> 
+<p>@property string <strong>_site_logo</strong> The file name of the image to be shown in Tweets. The path will always be the site's assets_url/images</p> 
 <h2> <a id="user-content-subpackages" class="anchor" href="#subpackages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subpackages</h2> 
 <p>We have chosen to use some of the most popular packages available to MODX Revolution. This is for two purposes, to expedite users new to the platform getting sites from production to live and to provide working examples of each. The following Packages will automatically be downloaded and installed for use with the Template:</p> 
 <ul> 
@@ -706,12 +706,14 @@ function setDocumentScrollTop(ypos)
 <p>The author does not intend to release updates everytime a subpackage is updated. You are free to update those as necessary.</p> 
 <h1> <a id="user-content-requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1> 
 <ol> 
- <li>Facebook, OpenGraph, Twitter Card and Google Analytics require the entry of designated attributes to fully benefit from indexing. If a required attribute is not specified the respective line will not be included in the output from <code>SEO-declarations</code>.</li> 
- <li>The site logo which will be used with OpenGraph and Twitter Card must be stored in /assets/images and specified in <code>SEO-MetaDeclarations</code> using the <code>&amp;site_logo</code> and <code>&amp;twitter_site_logo</code> parameters.</li> 
+ <li>Facebook, OpenGraph, Card and Google Analytics require the entry of designated attributes to fully benefit from indexing. If a required attribute is not specified the respective line will not be included in the output from <code>SEO-declarations</code>.</li> 
+ <li>The site logo which will be used with OpenGraph and Card must be stored in /assets/images and specified in <code>SEO-MetaDeclarations</code> using the <code>&amp;site_logo</code> and <code>&amp;_site_logo</code> parameters.</li> 
 </ol> 
 <h1> <a id="user-content-suggestions" class="anchor" href="#suggestions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Suggestions</h1> 
 <p>Users should modify the <code>siteHeader</code> and <code>siteFooter</code> to correctly link to site CSS and JavaScript Files to be included after Bootstrap 3 and FontAwesome 4. Also, imported Google Fonts should be designated in <code>siteHeader</code>.</p> 
 <h1> <a id="user-content-non-destructive-disclaimer" class="anchor" href="#non-destructive-disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Non-destructive Disclaimer</h1> 
-<p>The Subsequent package does not require the site to be empty to be used and will not destroy, reset, or otherwise alter preexisting content. It will, however, overwrite itself during updates. Please duplicate</p>
+<p>The Subsequent package does not require the site to be empty to be used and will not destroy, reset, or otherwise alter preexisting content. It will, however, overwrite itself during updates. Please duplicate components before use.</p> 
+<h1> <a id="user-content-additional-documentation" class="anchor" href="#additional-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Documentation</h1> 
+<p>For specific installation instructions peruse the docs folder.</p>
 </body>
 </html>
