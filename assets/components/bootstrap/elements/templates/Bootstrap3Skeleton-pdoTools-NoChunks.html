@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="[[++cultureKey:default=`en`]]">
+<!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# product: http://graph.facebook.com/schema/og/product#">
+<meta charset="utf8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="[[++site_url]]">
+<title>[[*pagetitle]]</title>
+<meta name="author" content="[[*createdby:userinfo=`fullname`:empty=`[[*createdby:userinfo=`username`]]`]]">
+<meta name="description" content="[[*description]]">
+<meta name="generator" content="MODX [[++settings_version]] ([[++settings_distro]])">
+<meta name="keywords" content="[[TaggerGetTags:strtolower:toPlaceholder=`pageTags`?rowTpl=`@INLINE [[+tag]]`&resources=`[[*id]]`&separator=`,`]][[+pageTags]]">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="">
+<meta name="twitter:description" content="[[*description:limit=`200`]]">
+<meta name="twitter:image" content="[[++assets_url]]images/logo.jpg">
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="[[*pagetitle:limit=`70`]]">
+<meta name="twitter:url"  content="[[~[[*id]]?scheme=`full`]]">
+<meta property="fb:app_id" content="">
+<meta property="fb:admins" content="">
+<meta property="og:description" content="[[*description]]">
+<meta property="og:image" content="[[++assets_url]]images/[[+site_logo]]">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="[[++site_name]]">
+<meta property="og:title" content="[[*pagetitle]]">
+<meta property="og:type" content="website">
+<meta property="og:updated_time" content="[[*editedon:empty=`[[*publishedon]]`:strtotime:date=`%FT%X-0500`]]">
+<meta property="og:url" content="[[~[[*id]]?scheme=`full`]]">
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-xxxxxx','auto');ga('send','pageview');</script>
+<link rel="canonical" href="[[~[[*id]]?scheme=`full`]]">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="[[++assets_url]]css/style.css?v=1">
+<link rel="shortcut icon" href="[[++assets_url]]images/favicon.png">
+<!--[if lt IE 9]>
+	<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="maxcdn=//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse">
+				[[pdoMenu:strip?
+					&displayStart=`1`
+					&parents=`0`
+					&level=`1`
+					&sortBy=`menuindex`
+					&sortdir=`ASC`
+					&scheme=`full`
+					&hideSubMenus=`1`
+					&tpl=`@INLINE <li [[+classes]]> <a href="[[+link]]" title="[[+pagetitle]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+					&tplOuter=`@INLINE <ul class="nav navbar-nav">[[+wrapper]]</ul>`
+					&titleOfLinks=`menutitle
+					&cacheResults=`1`
+					&outerClass=`nav-primary`
+					&hereClass=`active`]]
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		[[pdoCrumbs?
+			&from=``
+			&to=``
+			&direction=``
+			&outputSeparator=``
+			&limit=``
+			&tplWrapper=`@INLINE<ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">[[+crumbs]]</ol>`
+			&tplHome=`[[-- Use the &tpl as it is the same. Format is required for schema.org]]`
+			&tpl=`@INLINE<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="[[+link]]" itemprop="item"> <span itemprop="name">[[+menutitle]]</span></a><meta itemprop="position" content="[[+idx]]" /></li>`
+			&tplCurrent=`@INLINE<li class="last active disabled" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="[[+link]]" itemprop="item"> <span itemprop="name">[[+menutitle]]</span></a><meta itemprop="position" content="[[+idx]]" /></li>`
+			&tplMax=``
+			&hideSingle=`1`
+			&showAtHome=`0`
+			&showHome=`1`
+			&showCurrent=`1`]]
+		[[*content]]
+	</div>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<footer class="container-fluid">
+	<div class="row well">
+		[[*FooterContent]]
+	</div>
+</footer>
+<div class="container copyright">
+	<div class="row">
+		<div class="col-lg-5">
+			[[getCurrentYear:toPlaceholder=`currentYear`]] &copy; [[*createdon:strtotime:date=`%Y`:lt=`[[+currentYear]]`:then=`[[*createdon:strtotime:date=`%Y`]] - `]]  [[+currentYear]] [[++site_name]]. All Rights Reserved.
+		</div>
+		<div class="col-lg-7">
+			<div class="pull-right">
+				Powered By: <a href="//sanityllc.com" target="_blank" rel="nofollow">Sanity LLC</a>, <a href="//www.xpdo.org" target="_blank" rel="nofollow">xPDO</a>,
+				<a href="//www.modx.com" target="_blank" rel="nofollow">MODX [[++settings_version]]</a>, <a href="//getbootstrap.com/" target="_blank" rel="nofollow">Bootstrap 3</a>, <a href="//www.jquery.org" target="_blank" rel="nofollow">jQuery</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
