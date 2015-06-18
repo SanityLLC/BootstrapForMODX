@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="[[++assets_url]]css/style.css?v=1">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:700">
 <link rel="shortcut icon" href="[[++assets_url]]images/favicon.png">
+
 [[-- Enable the next line by removing the hyphens from the begining and change parents to point to a container of rss feeds for the site --]]
 [[-- !pdoResources?parents=`9`&limit=``&level=`1`&tpl=`@INLINE: <link rel="alternate" type="application/rss+xml" title="[[+pagetitle]]" href="[[+link]]">`&displayStart=`0`&sortby=`publishedon`&sortdir=`DESC`&tplInnerRow=`@CODE:`&tplParentRow=`@CODE:`&tplOuter=`@CODE:[[+wrapper]]`&scheme=`full`&useWeblinkUrl=`1`]]

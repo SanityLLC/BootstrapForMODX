@@ -643,77 +643,81 @@ function setDocumentScrollTop(ypos)
 <p>This is the main Git repository for using the Sanity LLC Bootstrap with MODX Revolution.</p> 
 <p>@SanityLLC/developers</p> 
 <h2> <a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2> 
-<p>We tried to take the simplest route to provide maximum extensibility and ease of use. The publisher can select MaxCDN/Bootstrap, CloudFlare, or local storage (default). Additionally, a seperate header and footer file has been included which can be used to implement site specific content. The default template will attempt to load the Bootstrap 3 and FontAwesome files from the official CDNs, unless otherwise specified at runtime. Versions can also be designated in the Template at the <code>CDN-Header</code> and <code>CDN-Footer</code> chunk calls. A local fallback route has been implemented to ensure the necessary CSS and JavaScript is loaded if a CDN fails for whatever reason. If a version is not specified the defaults will be used.</p> 
-<h3> <a id="user-content-facebook-opengraph--card-and-google-analytics" class="anchor" href="#facebook-opengraph--card-and-google-analytics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Facebook, OpenGraph, Card and Google Analytics</h3> 
-<p>OpenGraph and card entries are automatically created for each page using the Resource <code>pagetitle</code>, <code>createdby</code>, <code>publishedon</code>, <code>description</code> and other attributes. To function as intended the <code>SEO-MetaDeclarations</code> call requires Google Analytics ID, fb:app_id and/or fb:admins, :creator, and :site entires to be populated.</p> 
-<h2> <a id="user-content-page-map" class="anchor" href="#page-map" aria-hidden="true"><span class="octicon octicon-link"></span></a>Page Map</h2> 
-<ul> 
- <li>Template 
-  <ul> 
-   <li>HEAD 
-    <ul> 
-     <li>SEO-MetaDeclarations</li> 
-     <li>CDN-Header</li> 
-     <li>site-Header</li> 
-     <li>FontAwesome</li> 
-     <li>CDN-Shiv</li> 
-    </ul> </li> 
-   <li>BODY 
-    <ul> 
-     <li>Content</li> 
-    </ul> </li> 
-   <li>FOOTER 
-    <ul> 
-     <li>CDN-Footer</li> 
-     <li>site-Footer</li> 
-    </ul> </li> 
-  </ul> </li> 
-</ul> 
+<p><strong>Rapid deployment of web sites using Wayfinder and Quickcrumbs or pdoCrumbs, pdoResources, and pdoMenu.</strong></p> 
+<p>This MODX contribution allows the user to rapidly deploy Bootstrap sites by providing selectable CDNs and a drop in standard template which can be rapidly customized for use with Packages, layouts, and dedicated application front-ends.</p> 
+<p>We tried to take the simplest route to provide maximum extensibility and ease of use. The publisher can select MaxCDN/Bootstrap, CloudFlare, or local storage (default). Additionally, a seperate header and footer file has been included which can be used to implement site specific content. The default template will attempt to load the Bootstrap 3 and FontAwesome files from the local filesystem, unless otherwise specified at runtime. Versions can also be designated in the Template at the <code>CDN-Header</code> and <code>CDN-Footer</code> chunk calls. A local fallback route has been implemented to ensure the necessary CSS and JavaScript is loaded if a CDN fails for whatever reason. If a version is not specified the defaults will be used.</p> 
+<h2> <a id="user-content-facebook-opengraph-twitter-card-and-google-analytics" class="anchor" href="#facebook-opengraph-twitter-card-and-google-analytics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Facebook, OpenGraph, Twitter Card and Google Analytics</h2> 
+<p>OpenGraph and card entries are automatically created for each page using the Resource <code>pagetitle</code>, <code>createdby</code>, <code>publishedon</code>, <code>description</code> and other attributes. To function as intended the <code>SEO-MetaDeclarations</code> call requires Google Analytics ID, fb:app_id and/or fb:admins, :creator, and :site entries to be populated.</p> 
+<pre><code>Page Map
+ Template
+   HEAD
+     SEO-MetaDeclarations
+     CDN-Header
+     site-Header
+     FontAwesome
+     CDN-Shiv
+   BODY
+     Content
+   FOOTER
+     CDN-Footer
+     site-Footer
+</code></pre> 
 <h2> <a id="user-content-using-the-package" class="anchor" href="#using-the-package" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the Package</h2> 
-<p>It is highly suggested to duplicate the provided templates and chunks before use, as any updates to the Package will overwrite existing elements.</p> 
-<h3> <a id="user-content-cdn-footer" class="anchor" href="#cdn-footer" aria-hidden="true"><span class="octicon octicon-link"></span></a>CDN-Footer</h3> 
+<p>It is highly suggested for users to duplicate the provided Manager-based templates and chunks before use, as any updates to the Package will overwrite existing elements.</p> 
+<h2> <a id="user-content-cdn-footer" class="anchor" href="#cdn-footer" aria-hidden="true"><span class="octicon octicon-link"></span></a>CDN-Footer</h2> 
 <p>Loads the required JavaScript for Bootstrap.</p> 
-<p>@property string <strong>cdn</strong> The repository to use: bootstrap, maxcdn, cloudflare, local</p> 
-<p>@property string <strong>bootstrapVersion</strong> The version of bootstrap to load and should match CDN-Header. Defaults to 3.3.4.</p> 
-<h3> <a id="user-content-cdn-header" class="anchor" href="#cdn-header" aria-hidden="true"><span class="octicon octicon-link"></span></a>CDN-Header</h3> 
+<pre><code>@property string cdn The repository to use: bootstrap, maxcdn, cloudflare, local
+
+@property string bootstrapVersion The version of bootstrap to load and should match CDN-Header. Defaults to 3.3.4.
+</code></pre> 
+<h2> <a id="user-content-cdn-header" class="anchor" href="#cdn-header" aria-hidden="true"><span class="octicon octicon-link"></span></a>CDN-Header</h2> 
 <p>Loads Bootstrap and optionally its default template. Use the siteHeader chunk for dedicated templates which require Bootstrap to be loaded first.</p> 
-<p>@property string <strong>cdn</strong> The repository to use: bootstrap, maxcdn, cloudflare, local</p> 
-<p>@property string <strong>bootstrapVersion</strong> The version of bootstrap to load. Defaults to 3.3.4.</p> 
-<h3> <a id="user-content-cdn-shiv" class="anchor" href="#cdn-shiv" aria-hidden="true"><span class="octicon octicon-link"></span></a>CDN-Shiv</h3> 
+<pre><code>@property string cdn The repository to use: bootstrap, maxcdn, cloudflare, local
+
+@property string bootstrapVersion The version of bootstrap to load. Defaults to 3.3.4.
+</code></pre> 
+<h2> <a id="user-content-cdn-shiv" class="anchor" href="#cdn-shiv" aria-hidden="true"><span class="octicon octicon-link"></span></a>CDN-Shiv</h2> 
 <p>Loads html5shiv.min.js and respond.min.js.</p> 
-<p>@property string <strong>cdn</strong> The repository to use: bootstrap, maxcdn, cloudflare, local.</p> 
-<h3> <a id="user-content-seo-metadeclarations" class="anchor" href="#seo-metadeclarations" aria-hidden="true"><span class="octicon octicon-link"></span></a>SEO-MetaDeclarations</h3> 
-<p>Traditional, Facebook, OpenGraph, Card meta entries. Note: requires the page title to be limited to 70 characters and the description to 200 characters. These will be adjusted automatically.</p> 
-<p>@property string <strong>fb_app_id</strong> Instructions: <a href="https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html">https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html</a></p> 
-<p>@property string <strong>fb_admins</strong> Go to <a href="http://graph.facebook.com/YOUR-FACEBOOK-USERNAME">http://graph.facebook.com/YOUR-FACEBOOK-USERNAME</a> The first line should be your id. Instructions: <a href="https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html">https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html</a></p> 
-<p>@property string <strong>googleid</strong> The Google Id can be created by adding the site to your Google Analytics account <a href="http://www.google.com/analytics">http://www.google.com/analytics</a> Format: UA-11306908-1</p> 
-<p>@property string <strong>site_logo</strong> The file name of the image to be shown in Facebook Posts, Goolge Plus, LinkedIn, etc. The path will always be the site's assets_url/images. Image size should be 200x200 at a minimum.</p> 
-<p>@property string <strong>_creator</strong> @username of content creator Reference: <a href="https://dev..com/cards/markup">https://dev..com/cards/markup</a> Example: @shawnwilkerson</p> 
-<p>@property string <strong>_site</strong> The @username the card should be attributed to. For a company site use a company account (i.g. @SanityLLC), otherwise use the user's account.</p> 
-<p>@property string <strong>_site_logo</strong> The file name of the image to be shown in Tweets. The path will always be the site's assets_url/images</p> 
+<pre><code>@property string cdn The repository to use: bootstrap, maxcdn, cloudflare, local.
+</code></pre> 
+<h2> <a id="user-content-seo-metadeclarations" class="anchor" href="#seo-metadeclarations" aria-hidden="true"><span class="octicon octicon-link"></span></a>SEO-MetaDeclarations</h2> 
+<p>Traditional, Facebook, OpenGraph, Twitter Card meta entries. Note: requires the page title to be limited to 70 characters and the description to 200 characters. These will be adjusted automatically.</p> 
+<pre><code>@property string fb_app_id Instructions: https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html
+
+@property string fb_admins Go to http://graph.facebook.com/YOUR-FACEBOOK-USERNAME The first line should be your id. Instructions: https://help.yahoo.com/kb/yahoo-merchant-solutions/facebook-application-sln18861.html
+
+@property string googleid The Google Id can be created by adding the site to your Google Analytics account http://www.google.com/analytics Format: UA-11306908-1
+
+@property string site_logo The file name of the image to be shown in Facebook Posts, Goolge Plus, LinkedIn, etc. The path will always be the site's site_url/assets/images/ directory. Image size should be 200x200 at a minimum.
+
+@property string _creator @username of content creator Reference: https://dev..com/cards/markup Example: @shawnwilkerson
+
+@property string _site The @username the card should be attributed to. For a company site use a company  account (i.g. @SanityLLC), otherwise use the user's  account.
+
+@property string _site_logo The file name of the image to be shown in Tweets. The path will always be the site's assets_url/images
+</code></pre> 
 <h2> <a id="user-content-subpackages" class="anchor" href="#subpackages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subpackages</h2> 
-<p>We have chosen to use some of the most popular packages available to MODX Revolution. This is for two purposes, to expedite users new to the platform getting sites from production to live and to provide working examples of each. The following Packages will automatically be downloaded and installed for use with the Template:</p> 
-<ul> 
- <li>FontAwesome - Provides an automated means to load FontAwesome.</li> 
- <li>ObfuscateEmail-Revo - Automatically translates all email addresses displayed or linked on the site.</li> 
- <li>Quick Crumbs - Provides simple bread crumb functionality.</li> 
- <li>PdoTools - Provides Navigation, Breadcrumb, and fast access to resource and user information.</li> 
- <li>Wayfinder - Provides Navigation.</li> 
-</ul> 
-<h1> <a id="user-content-intended-use" class="anchor" href="#intended-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended Use</h1> 
-<p>The intention of this respository and subsequent MODX Revolution Package is to provide a single install setup which can be modified on the fly by those indivudals desiring to do so. It is not intended to necessarily have many updates. The only files which should ever be edited are the Bootstrap3 Template, and the <code>siteHeader</code> and <code>siteFooter</code> Chunks.</p> 
-<h1> <a id="user-content-unintended-use" class="anchor" href="#unintended-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unintended Use</h1> 
-<p>The author does not intend to release updates everytime a subpackage is updated. You are free to update those as necessary.</p> 
-<h1> <a id="user-content-requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1> 
+<p>We have chosen to use some of the most popular packages available to MODX Revolution. This is for two purposes, to expedite users new to the platform getting sites from production to live and to provide working examples of each. The following Packages will automatically be downloaded and installed for use with the Template: You may choose the pdoTools setup which does not require anything else, or the Wayfinder / Quickcrumbs version.</p> 
+<pre><code>  FontAwesome - Provides an automated means to load FontAwesome.
+  ObfuscateEmail-Revo - Automatically translates all email addresses displayed or linked on the site.
+  Quick Crumbs - Provides simple bread crumb functionality.
+  PdoTools - Provides Navigation, Breadcrumb, and fast access to resource and user information.
+  Wayfinder - Provides Navigation.
+</code></pre> 
+<h2> <a id="user-content-intended-use" class="anchor" href="#intended-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended Use</h2> 
+<p>The intention of this repository and subsequent MODX Revolution Package is to provide a single install setup which can be modified on the fly by those individual�s desiring to do so. It is not intended to necessarily have many updates. The only files which should ever be edited are the Bootstrap3 Template, and the <code>siteHeader</code> and <code>siteFooter</code> Chunks.</p> 
+<h2> <a id="user-content-unintended-use" class="anchor" href="#unintended-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unintended Use</h2> 
+<p>The author does not intend to release updates every time a subpackage is updated. You are free to update those as necessary.</p> 
+<h2> <a id="user-content-requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2> 
 <ol> 
  <li>Facebook, OpenGraph, Card and Google Analytics require the entry of designated attributes to fully benefit from indexing. If a required attribute is not specified the respective line will not be included in the output from <code>SEO-declarations</code>.</li> 
  <li>The site logo which will be used with OpenGraph and Card must be stored in /assets/images and specified in <code>SEO-MetaDeclarations</code> using the <code>&amp;site_logo</code> and <code>&amp;_site_logo</code> parameters.</li> 
 </ol> 
-<h1> <a id="user-content-suggestions" class="anchor" href="#suggestions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Suggestions</h1> 
+<h2> <a id="user-content-suggestions" class="anchor" href="#suggestions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Suggestions</h2> 
 <p>Users should modify the <code>siteHeader</code> and <code>siteFooter</code> to correctly link to site CSS and JavaScript Files to be included after Bootstrap 3 and FontAwesome 4. Also, imported Google Fonts should be designated in <code>siteHeader</code>.</p> 
-<h1> <a id="user-content-non-destructive-disclaimer" class="anchor" href="#non-destructive-disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Non-destructive Disclaimer</h1> 
+<h2> <a id="user-content-non-destructive-disclaimer-and-collision-warning" class="anchor" href="#non-destructive-disclaimer-and-collision-warning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Non-destructive Disclaimer and Collision Warning</h2> 
 <p>The Subsequent package does not require the site to be empty to be used and will not destroy, reset, or otherwise alter preexisting content. It will, however, overwrite itself during updates. Please duplicate components before use.</p> 
-<h1> <a id="user-content-additional-documentation" class="anchor" href="#additional-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Documentation</h1> 
-<p>For specific installation instructions peruse the docs folder.</p>
+<h2> <a id="user-content-additional-documentation" class="anchor" href="#additional-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Documentation</h2> 
+<p>For specific installation instructions see the docs/use folder.</p>
 </body>
 </html>

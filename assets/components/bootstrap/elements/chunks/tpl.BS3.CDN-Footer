@@ -1,4 +1,4 @@
-[[+cdn:default=`local`:strtolower:replace=`bootstrap==maxcdn`:select=`cloudflare=//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/&maxcdn=//maxcdn.bootstrapcdn.com/bootstrap/&local=[[++assets_url]]components/twitterbootstrap/`:toPlaceholder=`TWITTERBOOTSTRAPURL`]]
-[[+cdn:default=`local`:strtolower:replace=`bootstrap==maxcdn`:select=`cloudflare=//cdnjs.cloudflare.com/ajax/libs/jquery/[[+jqueryversion:default=`1.11.2`]]/jquery.min.js&maxcdn=//code.jquery.com/jquery-[[+jqueryversion:default=`1.11.2`]].min.js&local=[[+TWITTERBOOTSTRAPURL]][[+bootstrapVersion:default=`3.3.4`]]/js/jquery-[[+jqueryversion:default=`1.11.2`]].min.js`:toPlaceholder=`JQUERYURL`]]
+[[+cdn:default=`local`:strtolower:replace=`bootstrap==maxcdn`:select=`cloudflare=//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/&maxcdn=//maxcdn.bootstrapcdn.com/bootstrap/&local=[[++assets_url]]components/bootstrap/`:toPlaceholder=`TWITTERBOOTSTRAPURL`]]
+[[+cdn:default=`local`:strtolower:replace=`bootstrap==maxcdn`:select=`cloudflare=//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js&maxcdn=//code.jquery.com/jquery-1.11.2.min.js&local=[[+TWITTERBOOTSTRAPURL]][[+bootstrapVersion:default=`3.3.5`]]/js/jquery-1.11.2.min.js`:toPlaceholder=`JQUERYURL`]]
 <script src="[[+JQUERYURL]]"></script>
-<script src="[[+TWITTERBOOTSTRAPURL]][[+bootstrapVersion:default=`3.3.4`]]/js/bootstrap.min.js"></script>
+<script src="[[+TWITTERBOOTSTRAPURL]][[+bootstrapVersion:default=`3.3.5`]]/js/bootstrap.min.js"></script>

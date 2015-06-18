@@ -1,5 +1,14 @@
 Changelog file for TwitterBootstrapForMODX component.
 
-BootstrapForMODX 3.3.4
+BootstrapForMODX 3.3.4 (May 11, 2015)
 ====================================
 - Initial Release (versions match the vendor releases to avoid confusion).
+
+BootstrapForMODX 3.3.5 (June 18, 2015)
+====================================
+- Updated to Bootstrap 3.3.5 released June 16, 2015
+- Added base href="[[++site_url]] as some IDEs may have an issue with the MODX tags in the Template.
+- Added base href="[[++site_url]] to Bootstrap3Skeleton-pdoTools-NoChunks.html Template.
+- Changed default version in CDN-Footer and CDN-Header to reflect the vendor release.
+- CDN-Footer, CDN-Header, and CDN-Shiv are intentionally overwritten.
+- siteHeader and siteFooter Chunks appear only on the filesystem for reference to avoid overwrite in the MODX Manager.  

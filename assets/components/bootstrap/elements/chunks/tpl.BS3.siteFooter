@@ -1,18 +1,16 @@
-<footer class="container-fluid">
-	<div class="row well">
-		[[*FooterContent]]
-	</div>
-</footer>
-<div class="container copyright">
-	<div class="row">
-		<div class="col-lg-5">
-			[[getCurrentYear:toPlaceholder=`currentYear`]] &copy; [[*createdon:strtotime:date=`%Y`:lt=`[[+currentYear]]`:then=`[[*createdon:strtotime:date=`%Y`]] - `]]  [[+currentYear]] [[++site_name]]. All Rights Reserved.
-		</div>
-		<div class="col-lg-7">
-			<div class="pull-right">
-				Powered By: <a href="//sanityllc.com" target="_blank" rel="nofollow">Sanity LLC</a>, <a href="//www.xpdo.org" target="_blank" rel="nofollow">xPDO</a>,
-				<a href="//www.modx.com" target="_blank" rel="nofollow">MODX Revolution [[++settings_version]]</a>, <a href="//getbootstrap.com/" target="_blank" rel="nofollow">Bootstrap 3</a>, <a href="//www.jquery.org" target="_blank" rel="nofollow">jQuery</a>
+	<footer class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				[[getCurrentYear:toPlaceholder=`currentYear`]]
+				&copy; [[*createdon:strtotime:date=`%Y`:lt=`[[+currentYear]]`:then=`[[*createdon:strtotime:date=`%Y`]] - `]]  [[+currentYear]] [[++site_name]]. All
+				Rights Reserved.</a>
+			</div>
+			<div class="col-lg-7">
+				<div class="pull-right">
+					Powered By: <a href="//sanityllc.com" target="_blank" rel="nofollow">Sanity LLC</a>, <a href="//www.xpdo.org" target="_blank" rel="nofollow">xPDO</a>,
+						<a href="//www.modx.com" target="_blank" rel="nofollow">MODX Revolution [[++settings_version]]</a>, <a href="//getbootstrap.com/" target="_blank" rel="nofollow">Bootstrap 3</a>, <a href="//www.jquery.org"
+						target="_blank" rel="nofollow">jQuery</a>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
+	</footer>
